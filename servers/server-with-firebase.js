@@ -1,6 +1,4 @@
-import { createApp } from '../app.js'
-import { DatesModel } from '../models/DatesModel.js'
+import { createApp } from "../app.js"
+import { DatesModelFirebase } from "../models/DatesModelFireBase.js"
 
-
-
-createApp({ DatesModel: DatesModel })
+createApp({ DatesModel: DatesModelFirebase })
