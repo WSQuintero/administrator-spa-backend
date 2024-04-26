@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1a2b3c4d",
+    "date": "2024-05-10T10:00:00.000Z",
+    "scheduler": "Alice Smith",
+    "requestedService": "Consulta médica",
+    "clientName": "John Doe",
+    "clientPhone": "1234567890"
+  },
+  {
+    "id": "5e6f7g8h",
+    "date": "2024-05-15T14:30:00.000Z",
+    "scheduler": "Bob Brown",
+    "requestedService": "Terapia física",
+    "clientName": "Jane Smith",
+    "clientPhone": "0987654321"
+  },
+  {
+    "id": "9i0j1k2l",
+    "date": "2024-05-20T16:00:00.000Z",
+    "scheduler": "Charlie Williams",
+    "requestedService": "Asesoría financiera",
+    "clientName": "Emma Johnson",
+    "clientPhone": "1122334455"
+  }
+]

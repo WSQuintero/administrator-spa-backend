@@ -1,0 +1,20 @@
+{
+  "name": "proyecto-unas",
+  "version": "1.0.0",
+  "description": "proyecto destinado a elaborar un administrador y dashboard para un negocio de uñas",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon servers/server-with-firebase.js "
+  },
+  "author": "wsquintero",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "zod": "^3.23.4"
+  }
+}

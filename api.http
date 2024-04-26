@@ -1,0 +1,30 @@
+### Recuperar todas las citas
+GET http://localhost:1234/dates
+
+### Recuperar una cita por id
+GET http://localhost:1234/dates/1a2b3c4d
+
+### Recuperar todas las citas por un género
+GET http://localhost:1234/dates?date=2024-05-15T14:30:00.000Z
+
+### Crear una cita con POST
+POST http://localhost:1234/dates
+Content-Type: application/json
+
+{
+    "date": "2024-05-10T10:00:00.000Z",
+    "scheduler": "Santiago Quintero",
+    "requestedService": "Consulta",
+    "clientName": "John Doeeee",
+    "clientPhone": "12345678900"
+  }
+### Borrar una cita
+DELETE http://localhost:1234/dates/fd2d9913-275b-4d68-bb1b-ed2fe2aa5b7b
+
+### Actualizar una cita
+PATCH http://localhost:1234/dates/9i0j1k2l
+Content-Type: application/json
+
+{
+  "scheduler": "yo mero"
+}
