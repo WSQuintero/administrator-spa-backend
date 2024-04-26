@@ -19,10 +19,10 @@ Content-Type: application/json
     "clientPhone": "12345678900"
   }
 ### Borrar una cita
-DELETE http://localhost:1234/dates/XkNiBu9fFdwIeqYI3epv
+DELETE http://localhost:1234/dates/E0vjxoUgZDEcJdmm2Heb
 
 ### Actualizar una cita
-PATCH http://localhost:1234/dates/yBONanw0uXKPcisy14Dn
+PATCH http://localhost:1234/dates/2b5SBnWLMd3Rja1tmZYo
 Content-Type: application/json
 
 {

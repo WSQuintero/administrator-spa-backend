@@ -12,52 +12,76 @@ export class DatesController {
   }
 
   getById = async (req, res) => {
-    const { id } = req.params
-    const date = await this.DatesModel.getById({ id })
-    if (date) return res.json(date)
-    res.status(404).json({ message: "date not found" })
+    try {
+      const { id } = req.params
+      const date = await this.DatesModel.getById({ id })
+
+      if (date) {
+        return res.json(date)
+      } else {
+        return res.status(404).json({ message: "Date not found" })
+      }
+    } catch (error) {
+      console.error("Error fetching document by ID: ", error)
+      return res.status(500).json({ message: "Error fetching document by ID" })
+    }
   }
 
   create = async (req, res) => {
-    const result = validateDate(req.body)
+    try {
+      const result = validateDate(req.body)
 
-    if (!result.success) {
-      // 422 Unprocessable Entity
-      return res.status(400).json({ error: JSON.parse(result.error.message) })
+      if (!result.success) {
+        return res.status(422).json({ error: JSON.parse(result.error.message) })
+      }
+      const newDate = await this.DatesModel.create({ input: result.data })
+
+      return res.status(201).json(newDate)
+    } catch (error) {
+      return res.status(500).json({ message: "Error creating document" })
     }
-
-    const newdate = await this.DatesModel.create({ input: result.data })
-
-    res.status(201).json(newdate)
   }
 
   delete = async (req, res) => {
-    const { id } = req.params
+    try {
+      const { id } = req.params
+      const result = await this.DatesModel.delete({ id })
 
-    const result = await this.DatesModel.delete({ id })
+      if (!result) {
+        return res
+          .status(404)
+          .json({ message: "No document found with that ID." })
+      }
 
-    if (result.message === "Error deleting document") {
+      return res.status(200).json(result)
+    } catch (error) {
+      console.error("Error deleting document: ", error)
       return res.status(500).json({ message: "Error deleting document" })
     }
-    if (result.message === "No document found with that ID.") {
-      return res
-        .status(404)
-        .json({ message: "No document found with that ID." })
-    }
-    return res.status(200).json(result)
   }
 
   update = async (req, res) => {
-    const result = validatePartialDate(req.body)
+    try {
+      const result = validatePartialDate(req.body)
+      if (!result.success) {
+        return res.status(400).json({ error: JSON.parse(result.error.message) })
+      }
 
-    if (!result.success) {
-      return res.status(400).json({ error: JSON.parse(result.error.message) })
+      const { id } = req.params
+
+      const updatedDate = await this.DatesModel.update({
+        id,
+        input: result.data
+      })
+      if (!updatedDate) {
+        return res
+          .status(404)
+          .json({ message: "No document found with that ID." })
+      }
+
+      return res.json(updatedDate)
+    } catch (error) {
+      return res.status(500).json({ message: "Error updating document" })
     }
-
-    const { id } = req.params
-
-    const updateddate = await this.DatesModel.update({ id, input: result.data })
-
-    return res.json(updateddate)
   }
 }
