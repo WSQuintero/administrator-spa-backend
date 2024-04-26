@@ -1,10 +1,7 @@
-import {
-  validateDate,
-  validatePartialDate
-}from "../schemas/dates.js"
+import { validateDate, validatePartialDate } from "../schemas/dates.js"
 
 export class DatesController {
-  constructor ({ DatesModel }) {
+  constructor({ DatesModel }) {
     this.DatesModel = DatesModel
   }
 
@@ -18,14 +15,14 @@ export class DatesController {
     const { id } = req.params
     const date = await this.DatesModel.getById({ id })
     if (date) return res.json(date)
-    res.status(404).json({ message: 'date not found' })
+    res.status(404).json({ message: "date not found" })
   }
 
   create = async (req, res) => {
     const result = validateDate(req.body)
 
     if (!result.success) {
-    // 422 Unprocessable Entity
+      // 422 Unprocessable Entity
       return res.status(400).json({ error: JSON.parse(result.error.message) })
     }
 
@@ -39,11 +36,15 @@ export class DatesController {
 
     const result = await this.DatesModel.delete({ id })
 
-    if (result === false) {
-      return res.status(404).json({ message: 'date not found' })
+    if (result.message === "Error deleting document") {
+      return res.status(500).json({ message: "Error deleting document" })
     }
-
-    return res.json({ message: 'date deleted' })
+    if (result.message === "No document found with that ID.") {
+      return res
+        .status(404)
+        .json({ message: "No document found with that ID." })
+    }
+    return res.status(200).json(result)
   }
 
   update = async (req, res) => {
