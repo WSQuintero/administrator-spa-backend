@@ -1,3 +1,4 @@
+import { validateToken } from "../middlewares/validationToken.js"
 import { validatePartialSale, validateSale } from "../schemas/sales.js"
 
 export class SalesController {

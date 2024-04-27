@@ -1,5 +1,5 @@
+import { validateToken } from "../middlewares/validationToken.js"
 import { validateDate, validatePartialDate } from "../schemas/dates.js"
-import { validateToken } from "../utils.js"
 
 export class DatesController {
   constructor({ DatesModel }) {

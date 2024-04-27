@@ -1,3 +1,4 @@
+import { validateToken } from "../middlewares/validationToken.js"
 import { validateBill, validatePartialBill } from "../schemas/bills.js"
 
 export class BillsController {

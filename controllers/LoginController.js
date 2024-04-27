@@ -1,6 +1,6 @@
+import { validateToken } from "../middlewares/validationToken.js"
 import { validateLogin } from "../schemas/login.js"
 import dotenv from "dotenv"
-import { validateToken } from "../utils.js"
 dotenv.config()
 
 export class LoginController {

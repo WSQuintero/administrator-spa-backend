@@ -1,4 +1,4 @@
-import { validatePartialSale, validateSale } from "../schemas/sales.js"
+import { validateToken } from "../middlewares/validationToken.js"
 
 export class StatisticsController {
   constructor({ StatisticsModel }) {
