@@ -1,31 +1,47 @@
-import express, { json } from "express" // require -> commonJS
+import express from "express"
+import { json } from "express"
 import { corsMiddleware } from "./middlewares/cors.js"
 import { createDatesRouter } from "./routes/dates.js"
 import { createBillsRouter } from "./routes/bills.js"
 import { createSalesRouter } from "./routes/sales.js"
-import "dotenv/config"
 import { createStatisticsRouter } from "./routes/statistics.js"
+import { createLoginRouter } from "./routes/login.js"
+import { createSignUpRouter } from "./routes/signUp.js"
+import "dotenv/config"
 
-// después
 export const createApp = ({
   DatesModel,
   BillsModel,
   SalesModel,
-  StatisticsModel
+  StatisticsModel,
+  LoginModel,
+  SignUpModel
 }) => {
   const app = express()
+
+  // Middleware
   app.use(json())
   app.use(corsMiddleware())
   app.disable("x-powered-by")
 
+  // Rutas
   app.use("/dates", createDatesRouter({ DatesModel }))
   app.use("/bills", createBillsRouter({ BillsModel }))
   app.use("/sales", createSalesRouter({ SalesModel }))
   app.use("/statistics", createStatisticsRouter({ StatisticsModel }))
+  app.use("/login", createLoginRouter({ LoginModel }))
+  app.use("/signup", createSignUpRouter({ SignUpModel }))
 
-  const PORT = process.env.PORT ?? 1234
+  // Manejo de errores
+  app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(500).send("Something broke!")
+  })
+
+  // Puerto
+  const PORT = process.env.PORT || 1234
 
   app.listen(PORT, () => {
-    console.log(`server listening on port http://localhost:${PORT}`)
+    console.log(`Server listening on port http://localhost:${PORT}`)
   })
 }

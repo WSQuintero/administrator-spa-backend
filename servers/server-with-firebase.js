@@ -3,6 +3,7 @@ import { BillsModelFirebase } from "../models/BillsModelFirebase.js"
 import { DatesModelFirebase } from "../models/DatesModelFirebase.js"
 import { LoginModelFirebase } from "../models/LoginModelFirebase.js"
 import { SalesModelFirebase } from "../models/SalesModelFireBase.js"
+import { SignUpModelFirebase } from "../models/SignUpModelFirebase.js"
 import { StatisticsModelFirebase } from "../models/StatisticsModelFirebase.js"
 
 createApp({
@@ -10,5 +11,6 @@ createApp({
   BillsModel: BillsModelFirebase,
   SalesModel: SalesModelFirebase,
   StatisticsModel: StatisticsModelFirebase,
-  LoginModel: LoginModelFirebase
+  LoginModel: LoginModelFirebase,
+  SignUpModel: SignUpModelFirebase
 })

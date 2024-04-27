@@ -1,24 +1,27 @@
 ### Recuperar todas las citas
-GET http://localhost:1234/sales
+GET http://localhost:1234/dates
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1NjAwMiwiZXhwIjoxNzE0MjU2MDYyfQ.Mw9Wrf3JLdSPDngHEUnc0oqnluKrFgzWzafrNbG9FMU
 
 ### Recuperar una cita por id
 GET http://localhost:1234/statistics/2024/05
 
 ### Recuperar todas las citas por una fecha
 GET http://localhost:1234/sales?date=2024-05-01
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1NjAwMiwiZXhwIjoxNzE0MjU2MDYyfQ.Mw9Wrf3JLdSPDngHEUnc0oqnluKrFgzWzafrNbG9FMU
 
 ### Crear una cita con POST
-POST http://localhost:1234/bills
+POST http://localhost:1234/login
 Content-Type: application/json
 
 {
-  "date": "2024-05-10",
-  "scheduler": "Santiago",
-  "nameBill": "manicure",
-  "amount": 700,
-  "paid": true
+  "name":"santiago",
+  "email": "sanago123@hotmail.com",
+  "password": "1012437325Cc"
 }
 
+####
+GET http://localhost:1234/login/validation
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1NjAwMiwiZXhwIjoxNzE0MjU2MDYyfQ.Mw9Wrf3JLdSPDngHEUnc0oqnluKrFgzWzafrNbG9FMU
 
 ### Borrar una cita
 DELETE http://localhost:1234/sales/J72dV5QCiIJHtSW6nwUh
