@@ -5,7 +5,8 @@ const ACCEPTED_ORIGINS = [
   "http://localhost:1234",
   "https://dates.com",
   "https://midu.dev",
-  "https://administrator-spa-backend.vercel.app"
+  "https://administrator-spa-backend.vercel.app",
+  "https://administrator-spa-backend-production.up.railway.app"
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) =>
