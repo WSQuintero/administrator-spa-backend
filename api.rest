@@ -1,0 +1,82 @@
+### Recuperar todas las citas
+GET http://localhost:1234/dates
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Recuperar una cita por id
+GET http://localhost:1234/dates?id=id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Recuperar todas las citas por una fecha
+GET http://localhost:1234/dates?date=2024-05-01
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Crear una cita con POST
+POST http://localhost:1234/dates
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+Content-Type: application/json
+
+{
+  "date":"2024-12-30".
+  "scheduler":"santiago",
+  "requestedService": "Manicure",
+  "clientName": "Camila",
+  "clientPhone": "3222231587"
+}
+
+### Borrar una cita
+DELETE http://localhost:1234/dates/id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Actualizar una cita
+PATCH http://localhost:1234/dates/id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+Content-Type: application/json
+
+{
+  "scheduler": "yo mero"
+}
+
+### Recuperar todas las ventas
+GET http://localhost:1234/sales
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Recuperar una venta por id
+GET http://localhost:1234/sales?id=id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Recuperar todas las ventas por una fecha
+GET http://localhost:1234/sales?date=2024-05-01
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Crear una cita con POST
+POST http://localhost:1234/sales
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+Content-Type: application/json
+
+{
+  "date":"2024-12-30",
+  "scheduler":"santiago",
+  "nameSale": "Manicure",
+  "amount": 500,
+  "paid": true
+}
+
+### Borrar una cita
+DELETE http://localhost:1234/dates/id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+
+### Actualizar una cita
+PATCH http://localhost:1234/dates/id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+Content-Type: application/json
+
+{
+  "scheduler": "yo mero"
+}
+####
+GET http://localhost:1234/login/validation
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1NjAwMiwiZXhwIjoxNzE0MjU2MDYyfQ.Mw9Wrf3JLdSPDngHEUnc0oqnluKrFgzWzafrNbG9FMU
+
+#####
+GET http://localhost:1234/statistics/2024/02
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1NjAwMiwiZXhwIjoxNzE0MjU2MDYyfQ.Mw9Wrf3JLdSPDngHEUnc0oqnluKrFgzWzafrNbG9FMU

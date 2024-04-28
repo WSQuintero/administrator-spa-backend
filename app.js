@@ -4,9 +4,9 @@ import { corsMiddleware } from "./middlewares/cors.js"
 import { createDatesRouter } from "./routes/dates.js"
 import { createBillsRouter } from "./routes/bills.js"
 import { createSalesRouter } from "./routes/sales.js"
-import { createStatisticsRouter } from "./routes/statistics.js"
 import { createLoginRouter } from "./routes/login.js"
 import { createSignUpRouter } from "./routes/signUp.js"
+import { createStatisticsRouter } from "./routes/statistics.js"
 import "dotenv/config"
 
 export const createApp = ({

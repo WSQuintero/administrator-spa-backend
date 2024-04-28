@@ -1,0 +1,630 @@
+{
+	"info": {
+		"_postman_id": "36b2c1f6-71bf-4b85-9935-5d3903010faa",
+		"name": "Proyecto Uñas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32870165"
+	},
+	"item": [
+		{
+			"name": "Dates",
+			"item": [
+				{
+					"name": "Recuperar todas las citas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar una cita por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates?id=id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar todas las citas por una fecha",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates?date=2024-05-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear una cita con POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2024-12-30\",\n  \"scheduler\": \"santiago\",\n  \"requestedService\": \"Manicure\",\n  \"clientName\": \"Camila\",\n  \"clientPhone\": \"3222231587\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1234/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar una cita",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar una cita",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"scheduler\": \"yo mero\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1234/dates/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Recuperar todas las ventas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar una venta por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates?id=id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar todas las ventas por una fecha",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates?date=2024-05-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear una venta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2024-12-30\",\n  \"scheduler\": \"santiago\",\n  \"requestedService\": \"Manicure\",\n  \"clientName\": \"Camila\",\n  \"clientPhone\": \"3222231587\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1234/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar una venta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar una venta",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"scheduler\": \"yo mero\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1234/dates/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bills",
+			"item": [
+				{
+					"name": "Recuperar todos los gastos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar un gasto por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates?id=id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar todos los gastos por una fecha",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates?date=2024-05-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un gasto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2024-12-30\",\n  \"scheduler\": \"santiago\",\n  \"requestedService\": \"Manicure\",\n  \"clientName\": \"Camila\",\n  \"clientPhone\": \"3222231587\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1234/dates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar un gasto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/dates/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un gasto",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"scheduler\": \"yo mero\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1234/dates/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"dates",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authenticate",
+			"item": [
+				{
+					"name": "Validación de token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1NjAwMiwiZXhwIjoxNzE0MjU2MDYyfQ.Mw9Wrf3JLdSPDngHEUnc0oqnluKrFgzWzafrNbG9FMU"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/login/validation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"login",
+								"validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Statistics",
+			"item": [
+				{
+					"name": "Obtener todas las estadísticas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1234/statistics/2024/02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"statistics",
+								"2024",
+								"02"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

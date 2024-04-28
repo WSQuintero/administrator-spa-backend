@@ -4,7 +4,6 @@ export class StatisticsController {
   constructor({ StatisticsModel }) {
     this.StatisticsModel = StatisticsModel
   }
-
   getAll = async (req, res) => {
     const token = req?.headers?.authorization?.split(" ")[1]
     if (!token) {
