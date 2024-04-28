@@ -80,3 +80,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSa
 #####
 GET http://localhost:1234/statistics/2024/02
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1NjAwMiwiZXhwIjoxNzE0MjU2MDYyfQ.Mw9Wrf3JLdSPDngHEUnc0oqnluKrFgzWzafrNbG9FMU
+####
+POST http://localhost:1234/signup
+Content-Type: application/json
+{
+  "name": "Santiago",
+  "email": "sanago125@hotmail.com",
+  "password": "1012437325Cc*"
+}

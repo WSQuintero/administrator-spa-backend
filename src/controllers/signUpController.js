@@ -9,7 +9,6 @@ export class SignUpController {
 
   createUser = async (req, res) => {
     const saltRounds = 10
-
     try {
       const result = validatesignUp(req.body)
 

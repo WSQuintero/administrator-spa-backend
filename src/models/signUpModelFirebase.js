@@ -12,7 +12,7 @@ export class SignUpModelFirebase {
   static async createUser({ input }) {
     try {
       // Check if the email is already registered
-      const usersRef = collection(db, "users") // Ensure db is defined and "users" is a valid collection path
+      const usersRef = collection(db, "users")
       const querySnapshot = await getDocs(
         query(usersRef, where("email", "==", input.email))
       )
