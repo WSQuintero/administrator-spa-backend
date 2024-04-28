@@ -33,7 +33,7 @@ export class LoginModelFirebase {
             },
             process.env.JWT_SECRET,
             {
-              expiresIn: "1m"
+              expiresIn: "24h"
             }
           )
 
@@ -46,7 +46,7 @@ export class LoginModelFirebase {
           return { isAuthenticated: false, token: null, data: null }
         }
       } else {
-        return { isAuthenticated: false, token: null, data: null }
+        return { message: "user not found" }
       }
     } catch (error) {
       console.error("Error authenticating user: ", error)

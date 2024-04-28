@@ -88,3 +88,12 @@ Content-Type: application/json
   "email": "sanago125@hotmail.com",
   "password": "1012437325Cc*"
 }
+###
+POST http://localhost:1234/login
+Content-Type: application/json
+
+{
+  "name": "Santiago",
+  "email": "sanago125@hotmail.com",
+  "password": "1012437325Cc*"
+}

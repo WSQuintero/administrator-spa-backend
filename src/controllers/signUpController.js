@@ -1,4 +1,3 @@
-import bcrypt from "bcrypt"
 import { validatesignUp } from "../schemas/signUp.js"
 import { hashPassword } from "../utils.js"
 

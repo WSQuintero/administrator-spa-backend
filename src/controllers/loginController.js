@@ -27,6 +27,9 @@ export class LoginController {
       if (user.isAuthenticated === false) {
         return res.status(401).json({ error: "Incorrect password" })
       }
+      if (user.message === "user not found") {
+        return res.status(401).json({ error: "User not found" })
+      }
       return res
         .cookie("token", user.token, { httpOnly: true })
         .header("authorization", user.token)
