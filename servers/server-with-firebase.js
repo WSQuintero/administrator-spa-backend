@@ -1,10 +1,10 @@
 import { createApp } from "../app.js"
-import { BillsModelFirebase } from "../models/BillsModelFirebase.js"
-import { DatesModelFirebase } from "../models/DatesModelFirebase.js"
-import { LoginModelFirebase } from "../models/LoginModelFirebase.js"
-import { SalesModelFirebase } from "../models/SalesModelFireBase.js"
-import { SignUpModelFirebase } from "../models/SignUpModelFirebase.js"
+import { DatesModelFirebase } from "../models/DatesModelFireBase.js"
 import { StatisticsModelFirebase } from "../models/StatisticsModelFirebase.js"
+import { BillsModelFirebase } from "../models/billsModelFirebase.js"
+import { LoginModelFirebase } from "../models/loginModelFirebase.js"
+import { SalesModelFirebase } from "../models/salesModelFirebase.js"
+import { SignUpModelFirebase } from "../models/signUpModelFirebase.js"
 
 createApp({
   DatesModel: DatesModelFirebase,
