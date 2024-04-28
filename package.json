@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon servers/server-with-firebase.js "
+    "dev": "npx nodemon servers/server-with-firebase.js ",
+    "start": "node servers/server-with-firebase.js"
   },
   "author": "wsquintero",
   "license": "MIT",
