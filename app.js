@@ -31,7 +31,19 @@ export const createApp = ({
   app.use("/statistics", createStatisticsRouter({ StatisticsModel }))
   app.use("/login", createLoginRouter({ LoginModel }))
   app.use("/signup", createSignUpRouter({ SignUpModel }))
-
+  app.get("/", (req, res) => {
+    const htmlResponse = `
+      <html>
+        <head>
+          <title>NodeJs y Express en Vercel</title>
+        </head>
+        <body>
+          <h3>OK</h3>
+        </body>
+      </html>
+    `
+    res.send(htmlResponse)
+  })
   // Manejo de errores
   app.use((err, req, res, next) => {
     console.error(err.stack)
