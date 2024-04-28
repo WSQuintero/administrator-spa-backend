@@ -1,14 +1,14 @@
 {
-  "builds": [
-    {
-      "src": "./servers/server-with-firebase.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api": {
+      "handler": "./servers/server-with-firebase.js",
+      "runtime": "@vercel/node"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
