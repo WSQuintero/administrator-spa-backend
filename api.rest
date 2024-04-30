@@ -1,22 +1,22 @@
 ### Recuperar todas las citas
 GET http://localhost:1234/dates
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDQxODQzMSwiZXhwIjoxNzE0NTA0ODMxfQ.qUwHjXz-Qn8njYfL6ubVASsS2cOBdJ2vOPwKjBnHYcw
 
 ### Recuperar una cita por id
-GET http://localhost:1234/dates?id=id
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+GET http://localhost:1234/dates/GCn2loYWpUChJQfq4vjc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDQxODQzMSwiZXhwIjoxNzE0NTA0ODMxfQ.qUwHjXz-Qn8njYfL6ubVASsS2cOBdJ2vOPwKjBnHYcw
 
 ### Recuperar todas las citas por una fecha
-GET http://localhost:1234/dates?date=2024-05-01
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+GET http://localhost:1234/dates?date=2024-05-10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDQxODQzMSwiZXhwIjoxNzE0NTA0ODMxfQ.qUwHjXz-Qn8njYfL6ubVASsS2cOBdJ2vOPwKjBnHYcw
 
 ### Crear una cita con POST
 POST http://localhost:1234/dates
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDQxODQzMSwiZXhwIjoxNzE0NTA0ODMxfQ.qUwHjXz-Qn8njYfL6ubVASsS2cOBdJ2vOPwKjBnHYcw
 
 {
-  "date":"2024-12-30".
+  "date":"2024-12-30",
   "scheduler":"santiago",
   "requestedService": "Manicure",
   "clientName": "Camila",
@@ -24,16 +24,16 @@ Content-Type: application/json
 }
 
 ### Borrar una cita
-DELETE http://localhost:1234/dates/id
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+DELETE http://localhost:1234/dates/2b5SBnWLMd3Rja1tmZYo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDQxODQzMSwiZXhwIjoxNzE0NTA0ODMxfQ.qUwHjXz-Qn8njYfL6ubVASsS2cOBdJ2vOPwKjBnHYcw
 
 ### Actualizar una cita
-PATCH http://localhost:1234/dates/id
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlUHdIUEdSaFV6SmpIOGRYQnY0eiIsIm5hbWUiOiJzYW50aWFnbyIsImlhdCI6MTcxNDI1ODIwMCwiZXhwIjoxNzE0MjU4MjYwfQ.2G1f6uKf8O-A55E36rJLA2j7lsoBFm0L_iSiu0vuPP0
+PATCH http://localhost:1234/dates/AHaL7RcutOKdL28phN28
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDQxODQzMSwiZXhwIjoxNzE0NTA0ODMxfQ.qUwHjXz-Qn8njYfL6ubVASsS2cOBdJ2vOPwKjBnHYcw
 Content-Type: application/json
 
 {
-  "scheduler": "yo mero"
+  "date": "2024-05-10"
 }
 
 ### Recuperar todas las ventas
@@ -95,5 +95,5 @@ Content-Type: application/json
 {
   "name": "Santiago",
   "email": "sanago125@hotmail.com",
-  "password": "1012437325Cc*"
+  "password": "1012437325Cc"
 }

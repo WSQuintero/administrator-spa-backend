@@ -5,7 +5,6 @@ export class StatisticsModelFirebase {
   static async getByMonth({ year, month }) {
     const salesRef = collection(db, "sales")
     const billsRef = collection(db, "bills")
-
     const startDateString = `${year}-${month}-01`
     const endDateString = `${year}-${month}-${new Date(
       year,

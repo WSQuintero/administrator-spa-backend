@@ -1,17 +1,10 @@
-import {
-  collection,
-  addDoc,
-  getDocs,
-  updateDoc,
-  query,
-  where,
-  deleteDoc
-} from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../fbConfig/firebase.js"
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
 import dotenv from "dotenv"
 dotenv.config()
+
 export class LoginModelFirebase {
   static async login({ input }) {
     try {
@@ -19,6 +12,7 @@ export class LoginModelFirebase {
       const querySnapshot = await getDocs(
         query(usersRef, where("email", "==", input.email))
       )
+
       if (!querySnapshot.empty) {
         const userDoc = querySnapshot.docs[0].data()
         const isAutenticated = await bcrypt.compare(
@@ -49,7 +43,6 @@ export class LoginModelFirebase {
         return { message: "user not found" }
       }
     } catch (error) {
-      console.error("Error authenticating user: ", error)
       throw error
     }
   }

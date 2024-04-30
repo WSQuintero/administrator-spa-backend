@@ -8,25 +8,28 @@ export class DatesController {
 
   getAll = async (req, res) => {
     const token = req?.headers?.authorization?.split(" ")[1]
+    const isValidated = validateToken(token, req, res)
+
     if (!token) {
       return res.status(401).json({ error: "Access denied, token missing" })
     }
-    const isValidated = validateToken(token, req, res)
 
     if (isValidated === true) {
       const { date } = req.query
       const dates = await this.DatesModel.getAll({ date })
+
       res.json(dates)
     }
   }
 
   getById = async (req, res) => {
+    const token = req?.headers?.authorization?.split(" ")[1]
+    const isValidated = validateToken(token, req, res)
+
     try {
-      const token = req?.headers?.authorization?.split(" ")[1]
       if (!token) {
         return res.status(401).json({ error: "Access denied, token missing" })
       }
-      const isValidated = validateToken(token, req, res)
 
       if (isValidated === true) {
         const { id } = req.params
@@ -39,18 +42,18 @@ export class DatesController {
         }
       }
     } catch (error) {
-      console.error("Error fetching document by ID: ", error)
       return res.status(500).json({ message: "Error fetching document by ID" })
     }
   }
 
   create = async (req, res) => {
+    const token = req?.headers?.authorization?.split(" ")[1]
+    const isValidated = validateToken(token, req, res)
+
     try {
-      const token = req?.headers?.authorization?.split(" ")[1]
       if (!token) {
         return res.status(401).json({ error: "Access denied, token missing" })
       }
-      const isValidated = validateToken(token, req, res)
 
       if (isValidated === true) {
         const result = validateDate(req.body)
@@ -70,12 +73,13 @@ export class DatesController {
   }
 
   delete = async (req, res) => {
+    const token = req?.headers?.authorization?.split(" ")[1]
+    const isValidated = validateToken(token, req, res)
+
     try {
-      const token = req?.headers?.authorization?.split(" ")[1]
       if (!token) {
         return res.status(401).json({ error: "Access denied, token missing" })
       }
-      const isValidated = validateToken(token, req, res)
 
       if (isValidated === true) {
         const { id } = req.params
@@ -90,18 +94,18 @@ export class DatesController {
         return res.status(200).json(result)
       }
     } catch (error) {
-      console.error("Error deleting document: ", error)
       return res.status(500).json({ message: "Error deleting document" })
     }
   }
 
   update = async (req, res) => {
+    const token = req?.headers?.authorization?.split(" ")[1]
+    const isValidated = validateToken(token, req, res)
+
     try {
-      const token = req?.headers?.authorization?.split(" ")[1]
       if (!token) {
         return res.status(401).json({ error: "Access denied, token missing" })
       }
-      const isValidated = validateToken(token, req, res)
 
       if (isValidated === true) {
         const result = validatePartialDate(req.body)

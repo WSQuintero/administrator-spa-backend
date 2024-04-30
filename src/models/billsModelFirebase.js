@@ -12,6 +12,7 @@ import { db } from "../fbConfig/firebase.js"
 export class BillsModelFirebase {
   static async getAll({ paid, date }) {
     let querySnapshot
+
     if (paid !== undefined) {
       const billsRef = collection(db, "bills")
       querySnapshot = await getDocs(
@@ -46,9 +47,7 @@ export class BillsModelFirebase {
   static async create({ input }) {
     try {
       const docRef = await addDoc(collection(db, "bills"), input)
-      console.log("Document written with ID: ", docRef.id)
 
-      // Actualizar el documento recién creado con su ID
       await updateDoc(docRef, {
         id: docRef.id
       })

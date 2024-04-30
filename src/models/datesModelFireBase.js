@@ -15,7 +15,6 @@ export class DatesModelFirebase {
 
     if (date) {
       const datesRef = collection(db, "dates")
-
       const querySnapshot = await getDocs(
         query(datesRef, where("date", "==", date))
       )
@@ -33,7 +32,6 @@ export class DatesModelFirebase {
 
   static async getById({ id }) {
     const datesRef = collection(db, "dates")
-
     const querySnapshot = await getDocs(query(datesRef, where("id", "==", id)))
 
     if (!querySnapshot.empty) {
@@ -47,9 +45,7 @@ export class DatesModelFirebase {
   static async create({ input }) {
     try {
       const docRef = await addDoc(collection(db, "dates"), input)
-      console.log("Document written with ID: ", docRef.id)
 
-      // Actualizar el documento recién creado con su ID
       await updateDoc(docRef, {
         id: docRef.id
       })
@@ -103,7 +99,6 @@ export class DatesModelFirebase {
         return null
       }
     } catch (error) {
-      console.error("Error updating document: ", error)
       throw error
     }
   }

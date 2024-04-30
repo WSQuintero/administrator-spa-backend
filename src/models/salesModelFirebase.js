@@ -15,7 +15,6 @@ export class SalesModelFirebase {
 
     if (paid) {
       const salesRef = collection(db, "sales")
-
       const querySnapshot = await getDocs(
         query(salesRef, where("paid", "==", paid === "true"))
       )
@@ -28,7 +27,6 @@ export class SalesModelFirebase {
       }
     } else if (date) {
       const salesRef = collection(db, "sales")
-
       const querySnapshot = await getDocs(
         query(salesRef, where("date", "==", date))
       )
@@ -46,7 +44,6 @@ export class SalesModelFirebase {
 
   static async getById({ id }) {
     const salesRef = collection(db, "sales")
-
     const querySnapshot = await getDocs(query(salesRef, where("id", "==", id)))
 
     if (!querySnapshot.empty) {
