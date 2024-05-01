@@ -13,14 +13,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTW
 ### Crear una cita con POST
 POST http://localhost:1234/dates
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDQxODQzMSwiZXhwIjoxNzE0NTA0ODMxfQ.qUwHjXz-Qn8njYfL6ubVASsS2cOBdJ2vOPwKjBnHYcw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDaEFyd2NTWUlvY2JnWWo3aDg2dCIsIm5hbWUiOiJTYW50aWFnbyIsImlhdCI6MTcxNDU2NzcxMywiZXhwIjoxNzE0NjU0MTEzfQ.NUyjh0dymgBNs9cnsdQF4m4OEHSq6QdOlC1SN2ZRT68
 
 {
   "date":"2024-12-30",
   "scheduler":"santiago",
   "requestedService": "Manicure",
   "clientName": "Camila",
-  "clientPhone": "3222231587"
+  "clientPhone": "3222231587",
+  "appointmentTime":"09:45",
+  "endTime":"10:45"
 }
 
 ### Borrar una cita

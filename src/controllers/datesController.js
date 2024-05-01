@@ -49,7 +49,6 @@ export class DatesController {
   create = async (req, res) => {
     const token = req?.headers?.authorization?.split(" ")[1]
     const isValidated = validateToken(token, req, res)
-
     try {
       if (!token) {
         return res.status(401).json({ error: "Access denied, token missing" })
@@ -68,7 +67,7 @@ export class DatesController {
         return res.status(201).json(newDate)
       }
     } catch (error) {
-      return res.status(500).json({ message: "Error creating document" })
+      return res.status(500).json({ message: error })
     }
   }
 
