@@ -11,7 +11,8 @@ const dateSchema = z.object({
   requestedService: z.string(),
   clientName: z.string().min(2).max(50).optional(),
   clientPhone: z.string().min(7).max(15).optional(),
-  AppointmentTime: z.string()
+  AppointmentTime: z.string(),
+  endTime: z.string()
 })
 
 export function validateDate(input) {
