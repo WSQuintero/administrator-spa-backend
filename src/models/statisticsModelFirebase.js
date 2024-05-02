@@ -41,10 +41,14 @@ export class StatisticsModelFirebase {
             .reduce((a, b) => a + b)
         : 0
 
-    return {
-      monthlyTotalExpenses,
-      monthlyTotalSales,
-      totalProfitAmount: monthlyTotalSales - monthlyTotalExpenses
-    }
+    return [
+      {
+        year,
+        month,
+        monthlyTotalExpenses,
+        monthlyTotalSales,
+        totalProfitAmount: monthlyTotalSales - monthlyTotalExpenses
+      }
+    ]
   }
 }

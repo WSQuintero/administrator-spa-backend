@@ -13,6 +13,9 @@ export class StatisticsController {
 
     if (isValidated === true) {
       const { year, month } = req.params
+      if (isNaN(Number(year)) || isNaN(Number(month))) {
+        return res.status(400).json({ message: "Year is not a number" })
+      }
       const statistics = await this.StatisticsModel.getByMonth({ year, month })
       res.json(statistics)
     }
