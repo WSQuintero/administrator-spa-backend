@@ -7,19 +7,23 @@ export class DatesController {
   }
 
   getAll = async (req, res) => {
-    const token = req?.headers?.authorization?.split(" ")[1]
-    const isValidated = validateToken(token, req, res)
+    // const token = req?.headers?.authorization?.split(" ")[1]
+    // const isValidated = validateToken(token, req, res)
 
-    if (!token) {
-      return res.status(401).json({ error: "Access denied, token missing" })
-    }
+    // if (!token) {
+    //   return res.status(401).json({ error: "Access denied, token missing" })
+    // }
 
-    if (isValidated === true) {
-      const { date } = req.query
-      const dates = await this.DatesModel.getAll({ date })
+    // if (isValidated === true) {
+    //   const { date } = req.query
+    //   const dates = await this.DatesModel.getAll({ date })
 
-      res.json(dates)
-    }
+    //   res.json(dates)
+    // }
+    const { date } = req.query
+    const dates = await this.DatesModel.getAll({ date })
+
+    res.json(dates)
   }
 
   getById = async (req, res) => {
