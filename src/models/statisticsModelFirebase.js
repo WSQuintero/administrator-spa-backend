@@ -27,19 +27,15 @@ export class StatisticsModelFirebase {
         where("date", "<=", endDateString)
       )
     )
-    const monthlyTotalExpenses =
-      billsSnapshot.docs.length > 0
-        ? billsSnapshot.docs
-            .map((doc) => doc?.data()?.amount || 0)
-            .reduce((a, b) => a + b)
-        : 0
+    const monthlyTotalExpenses = billsSnapshot.docs
+      .filter((doc) => doc?.data()?.paid)
+      .map((doc) => doc?.data()?.amount || 0)
+      .reduce((total, amount) => total + amount, 0)
 
-    const monthlyTotalSales =
-      salesSnapshot.docs.length > 0
-        ? salesSnapshot.docs
-            .map((doc) => doc?.data()?.amount || 0)
-            .reduce((a, b) => a + b)
-        : 0
+    const monthlyTotalSales = salesSnapshot.docs
+      .filter((doc) => doc?.data()?.paid)
+      .map((doc) => doc?.data()?.amount || 0)
+      .reduce((total, amount) => total + amount, 0)
 
     return [
       {
