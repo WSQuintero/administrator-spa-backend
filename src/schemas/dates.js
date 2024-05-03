@@ -9,8 +9,8 @@ const dateSchema = z.object({
   ),
   scheduler: z.string(),
   requestedService: z.string(),
-  clientName: z.string().min(2).max(50).optional(),
-  clientPhone: z.string().min(7).max(15).optional(),
+  clientName: z.string().max(50).optional(),
+  clientPhone: z.string().max(15).optional(),
   appointmentTime: z.string(),
   endTime: z.string(),
   completed: z.boolean()
